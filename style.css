@@ -1,0 +1,287 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+	outline: none; border: none;
+	color:rgb(0, 0, 0);
+	font-family: 'Rubik', sans-serif;
+	text-decoration: none;
+	transition: all .3s linear;
+}
+
+
+
+.signIn{
+	display: inline-block;
+	margin-top: 1rem;
+	border-radius: .5rem ;
+	background-color:white;
+	color:  #04AA6D;
+	font-weight:bolder;
+	cursor: pointer;
+	padding: .8rem 3rem;
+}
+
+.signIn:hover{
+	background-color: #04AA6D;
+    color:white;
+}
+
+.header{
+	position: fixed;
+	top: 0; left: 0; right: 0;
+	z-index: 999;
+	background: #02033d;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding: 2.5rem 5%;
+	color: white;
+}
+
+.header .logo{
+	font-size: 3rem;
+	font-weight: bolder;
+	color: white;
+}
+.header .logo span{ 
+	color:rgba(0, 255, 55, 0.774);
+	font-weight: bolder;
+}
+
+.header .navbar a{
+	color:white;
+	margin: 0 1rem;
+}
+
+.header .navbar a:hover{
+    color: #0dfa7c; 
+    font-weight: bold;
+	
+}
+.header .signIn{
+	margin-top: 0;
+}
+
+
+
+.home{
+	max-width: 1300px;
+	margin: 9%;
+	width: 100%;
+	min-height: 570px;
+	display: flex;
+	align-items: center;
+	background-image: url(img/orange.png);
+	background-repeat: no-repeat;
+	background-size: 72%;
+
+}
+
+
+
+.homeText{
+	position: absolute;
+	padding: 16rem 0rem 11rem;
+	top: 2.5rem; right:auto;
+	
+}
+.getStarted{
+	padding: 15px 50px;
+	border-radius: 5rem ;
+	background-color:#04AA6D;
+	color: white ;
+	font-size: medium;
+	cursor: pointer;	
+	position: absolute;
+  	left: 949px;
+	bottom: 120px;
+
+}
+ .homeText h2{
+	padding-left: 930px;
+	color: black;
+	font-weight: bold;
+}
+
+.heading{
+	text-align: center;
+}
+
+.heading p, span{
+	font-weight: 500;
+	color:black;
+	font-weight: bold;
+}
+
+.heading h2{
+	font-size:3rem;
+	font-weight: 300 ;
+	color: #04AA6D;;
+}
+
+.cars-containers{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3rem;
+	
+}
+.cars-containers .box{
+	flex: 1 1 17rem;
+	position: relative;
+	height: 200px;
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+.cars-containers .box img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.cars-containers .box img:hover{
+	transform: scale(1.1);
+	transition: 0.5s ;
+}
+.cars-containers .box h2{
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	font-weight: 400;
+	font-size: 1rem;
+	padding: 8px;
+	border-radius: 0.5rem;
+	background:rgb(160, 154, 154);
+	color: #000000;
+}
+
+.cars-containers .box:hover h2{
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	font-weight: 400;
+	font-size: 1rem;
+	padding: 8px;
+	border-radius: 0.5rem;
+	background:#04AA6D;
+	color: white;
+}
+
+.about{
+	display:flex;
+	flex-wrap: center;
+	align-items: center;
+	gap: 1.5rem;
+	max-width: 1300px;
+	width: 100%;
+	min-height: 570px;
+}
+.about-img{
+	flex: 1 1 21rem;
+	width: 50rem;
+	height: 13rem;
+
+}
+.about-text{
+	flex: 21rem 1 1;
+	width: 20rem;
+	height: 1rem;
+}
+
+.about-text span{
+	color:#04AA6D;
+	font-weight: bolder
+}
+.about-text h2{
+	font-weight: 1.7rem;
+}
+.about-text p{
+	margin: 0.5rem 0 1.4rem;
+	font-weight: 500;
+	color:black;
+	font-weight: bold
+}
+
+
+.signInForm-container{
+	position: fixed;
+	top: -105%; left: 0;
+	z-index: 1000;
+	height: 100%;
+	width: 100%;
+	background:rgba(255, 255, 255, 0.9);
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+}
+
+.signInForm-container.active{
+	top: 0;
+	opacity: 1;
+}
+
+.signInForm-container form{
+	padding: 1.5rem;
+	margin: 1.5rem;
+	border-radius: .5;
+	background:#02033d;
+	border: 10rem;
+	text-align: center;
+	width: 40rem;
+}
+
+.signInForm-container form h4{
+	color: rgb(255, 255, 255);
+	font-size: 1.5rem;
+	padding-bottom: 1rem;
+	text-transform: uppercase;
+}
+.signInForm-container form .box{
+	color: black;
+	margin: .25rem 0;
+	width: 60%;
+	text-transform: none;
+	font-size: 1.2rem;
+	padding: .5rem 1.2rem;
+	border: var(--border);
+	border-radius: .5rem;
+}
+.signInForm-container form .signIn{
+	display: block;
+	width: 60%;
+	margin: 1rem 0 2rem 120px;
+	align-items: center;
+}
+
+.signInForm-container form p {
+	padding: .17rem 2rem;
+	color: white;
+}
+
+.signInForm-container form p a{
+	padding: 1rem 0;
+	color: #04AA6D;
+	text-decoration: underline;
+}
+.signInForm-container #close-signInForm{
+	position: absolute;
+	top: 1.5rem; right: 23rem;
+	margin: 9rem 0;
+	font-size: 2rem;
+	color: rgb(200, 62, 62);
+	cursor: pointer;
+}
+
+html{
+	overflow-x: hidden;
+	scroll-padding-top: 1rem;
+	scroll-behavior: smooth;
+}
+
+
